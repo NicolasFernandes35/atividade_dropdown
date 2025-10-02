@@ -1,0 +1,113 @@
+<!--Crie um layout com Header, dentro uma lista com botões das seguintes opções: home, linguagens, 
+about us, contact us. O botão linguagens terá um drop com as opções: HTML, CSS, JS, PHP e Python.
+O backgroud do header deve ser #22438c. O Hover deverá ser #112c66-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+        header{
+            background-color: #22438c;
+            padding: 10px;
+            position:fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            height: 60px;
+        }
+        ul{
+            list-style: none;
+            margin: 0px;
+            padding:0px;
+            overflow: hidden;
+        }
+        li{
+            float: left;
+            padding: 10px;
+        }
+        li a, .dropdown{
+            display: inline-block;
+            color: white;
+            background-color: #22438c;
+            text-decoration: none;
+            padding: 10px;
+        }
+        li a:hover, .dropdown:hover .dropdown-btn{
+            background-color: #112c66;
+        }
+        li.dropdown{
+            display: inline-block;
+            
+        }
+        .dropdown-btn a{
+            color: rgb(255, 255, 255);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+         .dropdown-btn {
+                opacity: 0;
+                transform: translateY(-20px);
+                transition: opacity 0.5s ease, transform 0.5s ease;
+                pointer-events: none;
+                color: rgb(255, 255, 255);
+                position: absolute;
+                background-color: #22438c;
+                min-width:160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+          }
+        .dropdown-btn a:hover{
+            background-color: #112c66;
+        }
+        .dropdown:hover .dropdown-btn {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        main{
+            width: 80%;
+            height: 100vw;
+            position: relative;
+            background-color: antiquewhite;
+            margin: 0 auto;
+            margin-top: 80px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li class="dropdown"><a href="#">linguagens</a>
+                <div class="dropdown-btn">
+                   <a href="#">HTML</a>
+                   <a href="#">CSS</a>
+                   <a href="#">JS</a>
+                   <a href="#">PHP</a>
+                   <a href="#">Python</a>
+                </div>
+            </li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class=""></div>
+        <div style="margin-top:60px; padding:20px;">
+            <h1>Bem vindo ao nosso site!</h1>
+            <p>Este é um exemplo de layout com header fixo e menu dropdown.</p>
+            <p>Use o menu acima para navegar pelas diferentes seções do site.</p>
+        </div>
+    </main>
+    
+</body>
+</html>
